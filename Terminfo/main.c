@@ -7,9 +7,13 @@
 //
 
 #include <stdio.h>
-
+#include <curses.h>
+#include <term.h>
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    printf("Hello, World!\n");
+    int err = 0;
+    int retVal = setupterm(NULL, 1, &err);
+    printf("Output is : %d, error is: %d \n", retVal,err);
+    int numLines = tigetnum("lines");
+    printf("Number of lines is: %d \n",numLines);
     return 0;
 }
