@@ -51,9 +51,9 @@ int main(int argc, const char * argv[]) {
             
             //6 Move cursor
             move(y, x);
-            //refresh();
         }
     }
+    //Exit
     endwin();
     return 0;
 }
